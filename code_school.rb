@@ -125,3 +125,4 @@ greeg_tweet = tweet_as("greegpollack")
 # => resolves as: lambda { |tweet| puts "greegpollack: #{tweet}" }
 
 greeg_tweet.call("Awesome!") # => gregpollack: Awesome!
+
