@@ -308,3 +308,23 @@ module ImageUtils
 end
 image = user.imageimage.preview
 
+# MIXIN - for object
+class Image
+end
+
+module ImageUtils
+	def preview
+	end
+end
+
+image1 = Image.new
+image.extend(ImageUtils) # Only this object can use methods from ImageUtils
+image.preview
+
+image2 = Image.new
+image.preview
+NoMethodError: undefined method 'prevew' for image2
+
+
+
+
